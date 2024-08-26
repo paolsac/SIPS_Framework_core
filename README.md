@@ -5,7 +5,7 @@ The SIPS framework collects different .Net libraries useful for writing generic 
 ## Get Packages
 
 -  [SIPS.Framework.Core.AutoRegister](https://github.com/paolsac/SIPS_Framework_core)- Base interfaces and functions to handles automatic registration of services for Autofac DI container (this repo).
--  [SIPS.Framework.Core](https://github.com/paolsac/SIPS_Framework_core) - Core dependency resoluton and common functions (this repo).
+-  [SIPS.Framework.Core](https://github.com/paolsac/SIPS_Framework_core) - Core dependency resolution and common functions (this repo).
 -  [SIPS.Framework.SDA](https://github.com/paolsac/SIPS_Framework_core) - Common and base functions for Simple Data Access (SDA)
 -  [SIPS.Framework.SDA_Postgress](https://github.com/paolsac/SIPS_Framework_core) - Postgress & Redshift provider for SDA.
 -  [SIPS.Framework.SDA_SqlServer](https://github.com/paolsac/SIPS_Framework_core) - SqlServer provider for SDA
