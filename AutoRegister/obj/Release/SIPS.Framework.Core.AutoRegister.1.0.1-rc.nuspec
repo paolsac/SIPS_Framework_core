@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SIPS.Framework.Core.AutoRegister</id>
+    <version>1.0.1-rc</version>
+    <title>AutoRegister module for SIPS framework</title>
+    <authors>Paolo Saccani</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <description>Base interfaces and functions to handles automatic registration of services for Autofac DI container.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright © 2023 Paolo Saccani</copyright>
+    <repository type="git" url="https://github.com/paolsac/SIPS_Framework_core" commit="58c8ef4ea4ef533bba5fa43a81cfdd137777274a" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Autofac" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="8.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options.ConfigurationExtensions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="4.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\paolo\Source\Repos\SIPS_Framework_core\AutoRegister\bin\Release\netstandard2.0\AutoRegister.dll" target="lib\netstandard2.0\AutoRegister.dll" />
+    <file src="C:\Users\paolo\Source\Repos\SIPS_Framework_core\README.md" target="\README.md" />
+  </files>
+</package>

@@ -1,0 +1,13 @@
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\bin\Debug\netstandard2.0\Core.deps.json
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\bin\Debug\netstandard2.0\Core.dll
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\bin\Debug\netstandard2.0\AutoRegister.dll
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\bin\Debug\netstandard2.0\AutoRegister.pdb
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.csproj.AssemblyReference.cache
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.csproj.CopyComplete
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\Core\obj\Debug\netstandard2.0\Core.pdb

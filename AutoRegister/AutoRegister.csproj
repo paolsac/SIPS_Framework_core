@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- VersionPrefix patched by AppVeyor -->
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <!-- Assembly metadata -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SIPS.Framework.Core.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <Copyright>Copyright © 2023 Paolo Saccani</Copyright>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>SIPS.Framework.Core.$(AssemblyName)</PackageId>
+    <Title>AutoRegister module for SIPS framework</Title>
+    <Company>Studio Ing. Paolo Saccani</Company>
+    <Authors>Paolo Saccani</Authors>
+    <Product>SIPS.Framework</Product>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Description>Base interfaces and functions to handles automatic registration of services for Autofac DI container.</Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/paolsac/SIPS_Framework_core</RepositoryUrl>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
+    <PackageVersion>1.0.3</PackageVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    <PackageReference Include="Serilog" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
