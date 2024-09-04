@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Core/1.0.0": {
+      "Core/0.0.1": {
         "dependencies": {
           "ConsoleTables": "2.4.2",
           "NETStandard.Library": "2.0.3",
@@ -356,7 +356,7 @@
     }
   },
   "libraries": {
-    "Core/1.0.0": {
+    "Core/0.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

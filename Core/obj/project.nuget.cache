@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hRz+A0rIwaZmTfb1l1o4GaxRQeCOle+5l3HAk1ZwbOKjbY7xx0w+W94axcjAvClYNuV0R8I0Na2Nn4ElaGpmGQ==",
+  "dgSpecHash": "A5HgcarcknNrIDmPNOcLvQOLqojIEFaEhhCPWm3rwfk9YQx9Bel5ga8farO7jhnQPcoV1emnBDmu5KyFKz00Eg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\Core\\Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\paolo\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\autofac\\8.1.0\\autofac.8.1.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\consoletables\\2.4.2\\consoletables.2.4.2.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
@@ -21,7 +21,7 @@
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\serilog\\4.0.1\\serilog.4.0.1.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\sips.framework.core.autoregister\\1.0.0\\sips.framework.core.autoregister.1.0.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\sips.framework.core.autoregister\\1.0.21-rc1\\sips.framework.core.autoregister.1.0.21-rc1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.1\\system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512",

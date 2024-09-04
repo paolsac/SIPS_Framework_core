@@ -11,13 +11,17 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Core")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Studio Ing. Paolo Saccani")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58c8ef4ea4ef533bba5fa43a81cfdd137777274a")]
-[assembly: System.Reflection.AssemblyProductAttribute("Core")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2023 Paolo Saccani")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Core dependency resolution and common functions.")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+431defca78e7d965a3ec44c883a7aeabdc763b10")]
+[assembly: System.Reflection.AssemblyProductAttribute("SIPS.Framework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Core")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.9.1.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/paolsac/SIPS_Framework_core")]
+[assembly: System.Resources.NeutralResourcesLanguageAttribute("en-US")]
 
 // Generato dalla classe WriteCodeFragment di MSBuild.
 

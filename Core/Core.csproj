@@ -1,13 +1,62 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- VersionPrefix patched by AppVeyor -->
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <!-- Assembly metadata -->
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>SIPS.Framework.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <RootNamespace>SIPS.Framework.Core.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <Copyright>Copyright © 2023 Paolo Saccani</Copyright>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>SIPS.Framework.$(AssemblyName)</PackageId>
+    <Title>Core module for SIPS framework</Title>
+    <Company>Studio Ing. Paolo Saccani</Company>
+    <Authors>Paolo Saccani</Authors>
+    <Product>SIPS.Framework</Product>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Description>Core dependency resolution and common functions.</Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/paolsac/SIPS_Framework_core</RepositoryUrl>
+    <PackageReleaseNotes>
+      fix InstanceCounterProvider:LogInstanceActions:Enabled flag usage
+      fix InstanceCounterProvider:LogReleaseActions:Enabled flag usage
+    </PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
+    <AssemblyVersion>0.9.1.0</AssemblyVersion>
+    <FileVersion>0.9.1.0</FileVersion>
+    <PackageVersion>1.0.22-rc1</PackageVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Version>$(VersionPrefix)</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConsoleTables" Version="2.4.2" />
-    <PackageReference Include="SIPS.Framework.Core.AutoRegister" Version="1.0.0" />
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConsoleTables" Version="2.4.2" />
+    <PackageReference Include="SIPS.Framework.Core.AutoRegister" Version="1.0.21-rc1" />
+  </ItemGroup>
+
+
 
 </Project>

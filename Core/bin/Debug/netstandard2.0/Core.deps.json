@@ -7,25 +7,25 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Core/1.0.0": {
+      "Core/0.0.1": {
         "dependencies": {
-          "AutoRegister": "1.0.0",
           "ConsoleTables": "2.4.2",
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "SIPS.Framework.Core.AutoRegister": "1.0.21-rc1"
         },
         "runtime": {
           "Core.dll": {}
         }
       },
-      "Autofac/8.0.0": {
+      "Autofac/8.1.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Diagnostics.DiagnosticSource": "8.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Autofac.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
           }
         }
       },
@@ -201,6 +201,22 @@
           }
         }
       },
+      "SIPS.Framework.Core.AutoRegister/1.0.21-rc1": {
+        "dependencies": {
+          "Autofac": "8.1.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
+          "Serilog": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoRegister.dll": {
+            "assemblyVersion": "0.9.1.0",
+            "fileVersion": "0.9.1.1"
+          }
+        }
+      },
       "System.Buffers/4.5.1": {
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {
@@ -336,34 +352,21 @@
             "fileVersion": "4.6.28619.1"
           }
         }
-      },
-      "AutoRegister/1.0.0": {
-        "dependencies": {
-          "Autofac": "8.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
-          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
-          "Serilog": "4.0.1"
-        },
-        "runtime": {
-          "AutoRegister.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Core/1.0.0": {
+    "Core/0.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Autofac/8.0.0": {
+    "Autofac/8.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qxVqJcl3fixxa5aZc9TmIuYTwooI9GCL5RzfUiTZtTlbAF3NcWz7bPeEyJEAyS/0qGhSyGnXeku2eiu/7L+3qw==",
-      "path": "autofac/8.0.0",
-      "hashPath": "autofac.8.0.0.nupkg.sha512"
+      "sha512": "sha512-O2QT+0DSTBR2Ojpacmcj3L0KrnnXTFrwLl/OW1lBUDiHhb89msHEHNhTA8AlK3jdFiAfMbAYyQaJVvRe6oSBcQ==",
+      "path": "autofac/8.1.0",
+      "hashPath": "autofac.8.1.0.nupkg.sha512"
     },
     "ConsoleTables/2.4.2": {
       "type": "package",
@@ -477,6 +480,13 @@
       "path": "serilog/4.0.1",
       "hashPath": "serilog.4.0.1.nupkg.sha512"
     },
+    "SIPS.Framework.Core.AutoRegister/1.0.21-rc1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pa8CDuuJzNClFbu++aRFJOvzyxV1rNZb3waGBO4jwggeekUuEbZRd02D5jeEqe9v1oLjDqpMglUuBbKtcCQPJw==",
+      "path": "sips.framework.core.autoregister/1.0.21-rc1",
+      "hashPath": "sips.framework.core.autoregister.1.0.21-rc1.nupkg.sha512"
+    },
     "System.Buffers/4.5.1": {
       "type": "package",
       "serviceable": true,
@@ -581,11 +591,6 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
-    },
-    "AutoRegister/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
