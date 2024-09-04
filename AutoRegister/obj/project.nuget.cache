@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pJkQnW27+Rge+7zESjVGYGIfA6o/xnxYi1d6M97ThEKSK5LLPL03ZXEBCKXcx6tjGAzusZkb/h4QKbryDGsqgg==",
+  "dgSpecHash": "7jBhgJF64HvxXAjNnwC6s6xfbQg5JrW1fqNBMZD7LyWQEWv2C9uxsZYxapiAr0V8uttoZ47AYajhdkOVYyrPww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj",
+  "projectFilePath": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\paolo\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\autofac\\8.1.0\\autofac.8.1.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",

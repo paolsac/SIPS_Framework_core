@@ -69,8 +69,12 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
             return query;
         }
 
-        public static void ConfigureContainer(ContainerBuilder builder, Assembly serviceAssembly, string autoRegisterConfigKey)
+        public static void ConfigureContainer(ContainerBuilder builder, Assembly serviceAssembly, string autoRegisterConfigKey, Predicate<Type> typeFilter = null)
         {
+
+            Predicate<Type> finalTypeFilter = typeFilter ?? (t => true);
+
+
             bool original_dump = SIPSRegistrationToolbox.Dump;
             IEnumerable<Type> types;
 
@@ -98,7 +102,10 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
             // IFCAutoRegisterSingleton
             //
             {
-                types = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterSingleton).IsAssignableFrom(t));
+                types = serviceAssembly.GetTypes()
+                    .Where(t => typeof(IFCAutoRegisterSingleton).IsAssignableFrom(t))
+                    .Where(t=> finalTypeFilter(t))
+                    ;
 
                 foreach (var item in types)
                 {
@@ -108,6 +115,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                 }
                 builder.RegisterAssemblyTypes(serviceAssembly)
                     .Where(t => typeof(IFCAutoRegisterSingleton).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t))
                     .SingleInstance();
             }
 
@@ -115,7 +123,8 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
             // IFCAutoRegisterTransient
             //
             {
-                types = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterTransient).IsAssignableFrom(t));
+                types = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterTransient).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t));
                 foreach (var item in types)
                 {
                     if (Dump && logger != null)
@@ -125,6 +134,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                 }
                 builder.RegisterAssemblyTypes(serviceAssembly)
                     .Where(t => typeof(IFCAutoRegisterTransient).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t))
                     .InstancePerDependency();
             }
 
@@ -132,7 +142,8 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
             // IFCAutoRegisterScoped
             //
             {
-                types = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterScoped).IsAssignableFrom(t));
+                types = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterScoped).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t));
                 foreach (var item in types)
                 {
                     if (Dump && logger != null)
@@ -142,6 +153,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                 }
                 builder.RegisterAssemblyTypes(serviceAssembly)
                     .Where(t => typeof(IFCAutoRegisterScoped).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t))
                     .InstancePerLifetimeScope();
             }
 
@@ -165,8 +177,10 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
             SIPSRegistrationToolbox.Dump = original_dump;
         }
 
-        public static void ConfigureContainerNamed<TService>(ContainerBuilder builder, Assembly serviceAssembly, string autoRegisterConfigKey, string customName = null)
+        public static void ConfigureContainerNamed<TService>(ContainerBuilder builder, Assembly serviceAssembly, string autoRegisterConfigKey, string customName = null, Predicate<Type> typeFilter = null)
         {
+            Predicate<Type> finalTypeFilter = typeFilter ?? (t => true);
+
             bool original_dump = SIPSRegistrationToolbox.Dump;
             IEnumerable<Type> namedTypes;
 
@@ -194,7 +208,8 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
             // IFCAutoRegisterScoped
             //
             {
-                namedTypes = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t));
+                namedTypes = serviceAssembly.GetTypes().Where(t => typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t));
                 foreach (var item in namedTypes)
                 {
                     if (Dump && logger != null)
@@ -204,6 +219,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                 }
                 builder.RegisterAssemblyTypes(serviceAssembly)
                     .Where(t => typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t))
                     .InstancePerLifetimeScope()
                     .Named<TService>(t => customName ?? t.Name)
                     ;
@@ -215,7 +231,8 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                 namedTypes = serviceAssembly.GetTypes()
                     .Where(t =>
                         typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t)
-                        );
+                        )
+                    .Where(t => finalTypeFilter(t));
                 foreach (var item in namedTypes)
                 {
                     if (Dump && logger != null)
@@ -225,6 +242,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                 }
                 builder.RegisterAssemblyTypes(serviceAssembly)
                     .Where(t => typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t))
+                    .Where(t => finalTypeFilter(t))
                     .InstancePerDependency()
                     .Named<TService>(t => customName ?? t.Name)
                     ;
@@ -232,8 +250,9 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
 
         }
 
-        public static void ConfigureContainerNamedByInterface<TInterface, TService>(ContainerBuilder builder, Assembly serviceAssembly, string autoRegisterConfigKey, string customName = null)
+        public static void ConfigureContainerNamedByInterface<TInterface, TService>(ContainerBuilder builder, Assembly serviceAssembly, string autoRegisterConfigKey, string customName = null, Predicate<Type> typeFilter = null)
         {
+            Predicate<Type> finalTypeFilter = typeFilter ?? (t => true);
             bool original_dump = SIPSRegistrationToolbox.Dump;
             IEnumerable<Type> namedTypes;
 
@@ -265,7 +284,8 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                     .Where(t => 
                         typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
-                        );
+                        )
+                    .Where(t => finalTypeFilter(t));
                 foreach (var item in namedTypes)
                 {
                     if (Dump && logger != null)
@@ -278,6 +298,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                         typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
                         )
+                    .Where(t => finalTypeFilter(t))
                     .InstancePerLifetimeScope()
                     .Named<TInterface>(t => customName ?? t.Name)
                     ;
@@ -290,7 +311,8 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                     .Where(t =>
                         typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
-                        );
+                        )
+                    .Where(t => finalTypeFilter(t));
                 foreach (var item in namedTypes)
                 {
                     if (Dump && logger != null)
@@ -303,6 +325,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                         typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
                         )
+                    .Where(t => finalTypeFilter(t))
                     .InstancePerDependency()
                     .Named<TInterface>(t => customName ?? t.Name)
                     ;

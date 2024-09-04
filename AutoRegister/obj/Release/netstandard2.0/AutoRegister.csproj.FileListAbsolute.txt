@@ -21,3 +21,6 @@ C:\Users\paolo\Source\Repos\SIPS_Framework_core\AutoRegister\obj\Release\netstan
 C:\Users\paolo\Source\Repos\SIPS_Framework_core\AutoRegister\obj\Release\netstandard2.0\AutoRegister.pdb
 C:\Users\paolo\Source\Repos\SIPS_Framework_core\AutoRegister\obj\Release\netstandard2.0\SIPS.Framework.Core.AutoRegister.Properties.Resources.resources
 C:\Users\paolo\Source\Repos\SIPS_Framework_core\AutoRegister\obj\Release\netstandard2.0\AutoRegister.csproj.GenerateResource.cache
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_Framework_core\AutoRegister\obj\Release\netstandard2.0\SIPS.Framework.Core.AutoRegister.Properties.Resources.resources
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_Framework_core\AutoRegister\obj\Release\netstandard2.0\AutoRegister.csproj.GenerateResource.cache
+C:\Users\paolo\source\repos\SIPS_framework\SIPS_Framework_core\AutoRegister\obj\Release\netstandard2.0\AutoRegister.sourcelink.json

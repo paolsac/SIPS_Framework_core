@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj": {}
+    "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj": {
-      "version": "1.0.3",
+    "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj": {
+      "version": "1.0.21-rc1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj",
+        "projectUniqueName": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj",
         "projectName": "SIPS.Framework.Core.AutoRegister",
-        "projectPath": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj",
+        "projectPath": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj",
         "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\obj\\",
+        "outputPath": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\paolo\\.nuget_local\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,7 +43,7 @@
           "dependencies": {
             "Autofac": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.1.0, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",

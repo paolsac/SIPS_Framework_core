@@ -7,9 +7,9 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "AutoRegister/1.0.0": {
+      "AutoRegister/0.0.1": {
         "dependencies": {
-          "Autofac": "8.0.0",
+          "Autofac": "8.1.0",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
@@ -21,15 +21,15 @@
           "AutoRegister.dll": {}
         }
       },
-      "Autofac/8.0.0": {
+      "Autofac/8.1.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
           "System.Diagnostics.DiagnosticSource": "8.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Autofac.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
           }
         }
       },
@@ -274,17 +274,17 @@
     }
   },
   "libraries": {
-    "AutoRegister/1.0.0": {
+    "AutoRegister/0.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Autofac/8.0.0": {
+    "Autofac/8.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qxVqJcl3fixxa5aZc9TmIuYTwooI9GCL5RzfUiTZtTlbAF3NcWz7bPeEyJEAyS/0qGhSyGnXeku2eiu/7L+3qw==",
-      "path": "autofac/8.0.0",
-      "hashPath": "autofac.8.0.0.nupkg.sha512"
+      "sha512": "sha512-O2QT+0DSTBR2Ojpacmcj3L0KrnnXTFrwLl/OW1lBUDiHhb89msHEHNhTA8AlK3jdFiAfMbAYyQaJVvRe6oSBcQ==",
+      "path": "autofac/8.1.0",
+      "hashPath": "autofac.8.1.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
       "type": "package",

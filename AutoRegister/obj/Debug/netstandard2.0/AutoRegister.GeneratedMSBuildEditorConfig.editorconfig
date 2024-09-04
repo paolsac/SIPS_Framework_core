@@ -1,5 +1,5 @@
 is_global = true
 build_property.RootNamespace = SIPS.Framework.Core.AutoRegister
-build_property.ProjectDir = C:\Users\paolo\Source\Repos\SIPS_Framework_core\AutoRegister\
+build_property.ProjectDir = C:\Users\paolo\source\repos\SIPS_framework\SIPS_framework_core\AutoRegister\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

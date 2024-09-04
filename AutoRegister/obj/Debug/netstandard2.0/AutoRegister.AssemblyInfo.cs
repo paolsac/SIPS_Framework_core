@@ -16,11 +16,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2023 Paolo Saccani")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Base interfaces and functions to handles automatic registration of services for A" +
     "utofac DI container.")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+58c8ef4ea4ef533bba5fa43a81cfdd137777274a")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.1.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+431defca78e7d965a3ec44c883a7aeabdc763b10")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIPS.Framework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoRegister")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.0.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.9.1.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/paolsac/SIPS_Framework_core")]
 [assembly: System.Resources.NeutralResourcesLanguageAttribute("en-US")]
 

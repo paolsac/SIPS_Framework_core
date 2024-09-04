@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Autofac/8.0.0": {
+      "Autofac/8.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
-          "System.Diagnostics.DiagnosticSource": "7.0.2"
+          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
+          "System.Diagnostics.DiagnosticSource": "8.0.1"
         },
         "compile": {
           "lib/netstandard2.0/Autofac.dll": {
@@ -385,15 +385,15 @@
     }
   },
   "libraries": {
-    "Autofac/8.0.0": {
-      "sha512": "qxVqJcl3fixxa5aZc9TmIuYTwooI9GCL5RzfUiTZtTlbAF3NcWz7bPeEyJEAyS/0qGhSyGnXeku2eiu/7L+3qw==",
+    "Autofac/8.1.0": {
+      "sha512": "O2QT+0DSTBR2Ojpacmcj3L0KrnnXTFrwLl/OW1lBUDiHhb89msHEHNhTA8AlK3jdFiAfMbAYyQaJVvRe6oSBcQ==",
       "type": "package",
-      "path": "autofac/8.0.0",
+      "path": "autofac/8.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "autofac.8.0.0.nupkg.sha512",
+        "autofac.8.1.0.nupkg.sha512",
         "autofac.nuspec",
         "icon.png",
         "lib/net6.0/Autofac.dll",
@@ -1284,7 +1284,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Autofac >= 8.0.0",
+      "Autofac >= 8.1.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.1",
       "Microsoft.Extensions.Hosting.Abstractions >= 8.0.0",
@@ -1297,13 +1297,13 @@
     "C:\\Users\\paolo\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.3",
+    "version": "1.0.21-rc1",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj",
+      "projectUniqueName": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj",
       "projectName": "SIPS.Framework.Core.AutoRegister",
-      "projectPath": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\AutoRegister.csproj",
+      "projectPath": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj",
       "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paolo\\Source\\Repos\\SIPS_Framework_core\\AutoRegister\\obj\\",
+      "outputPath": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1314,6 +1314,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\paolo\\.nuget_local\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1334,7 +1335,7 @@
         "dependencies": {
           "Autofac": {
             "target": "Package",
-            "version": "[8.0.0, )"
+            "version": "[8.1.0, )"
           },
           "Microsoft.Extensions.Configuration.Abstractions": {
             "target": "Package",
