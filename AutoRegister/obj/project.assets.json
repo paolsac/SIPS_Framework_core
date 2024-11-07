@@ -1297,7 +1297,7 @@
     "C:\\Users\\paolo\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.21-rc1",
+    "version": "1.0.26-rc1",
     "restore": {
       "projectUniqueName": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\AutoRegister\\AutoRegister.csproj",
       "projectName": "SIPS.Framework.Core.AutoRegister",

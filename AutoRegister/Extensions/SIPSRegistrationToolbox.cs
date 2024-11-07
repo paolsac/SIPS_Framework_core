@@ -284,6 +284,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                     .Where(t => 
                         typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
+                        && typeof(TService).IsAssignableFrom(t)
                         )
                     .Where(t => finalTypeFilter(t));
                 foreach (var item in namedTypes)
@@ -297,10 +298,11 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                     .Where(t => 
                         typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
+                        && typeof(TService).IsAssignableFrom(t)
                         )
                     .Where(t => finalTypeFilter(t))
                     .InstancePerLifetimeScope()
-                    .Named<TInterface>(t => customName ?? t.Name)
+                    .Named<TService>(t => customName ?? t.Name)
                     ;
             }
             //
@@ -311,6 +313,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                     .Where(t =>
                         typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
+                        && typeof(TService).IsAssignableFrom(t)
                         )
                     .Where(t => finalTypeFilter(t));
                 foreach (var item in namedTypes)
@@ -324,10 +327,11 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                      .Where(t =>
                         typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t)
                         && typeof(TInterface).IsAssignableFrom(t)
+                        && typeof(TService).IsAssignableFrom(t)
                         )
                     .Where(t => finalTypeFilter(t))
                     .InstancePerDependency()
-                    .Named<TInterface>(t => customName ?? t.Name)
+                    .Named<TService>(t => customName ?? t.Name)
                     ;
             }
 

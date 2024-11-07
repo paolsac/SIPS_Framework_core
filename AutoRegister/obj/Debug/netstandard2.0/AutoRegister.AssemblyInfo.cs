@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Base interfaces and functions to handles automatic registration of services for A" +
     "utofac DI container.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.1.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+431defca78e7d965a3ec44c883a7aeabdc763b10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+3cf37010bba3a1a1a842243b37e33f76972ee66e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIPS.Framework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoRegister")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.9.1.0")]
