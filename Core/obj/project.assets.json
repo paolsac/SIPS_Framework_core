@@ -291,7 +291,7 @@
           }
         }
       },
-      "SIPS.Framework.Core.AutoRegister/1.0.21-rc1": {
+      "SIPS.Framework.Core.AutoRegister/1.0.26-rc1": {
         "type": "package",
         "dependencies": {
           "Autofac": "8.1.0",
@@ -1142,16 +1142,16 @@
         "serilog.nuspec"
       ]
     },
-    "SIPS.Framework.Core.AutoRegister/1.0.21-rc1": {
-      "sha512": "pa8CDuuJzNClFbu++aRFJOvzyxV1rNZb3waGBO4jwggeekUuEbZRd02D5jeEqe9v1oLjDqpMglUuBbKtcCQPJw==",
+    "SIPS.Framework.Core.AutoRegister/1.0.26-rc1": {
+      "sha512": "8wnJ6Ls/K3lAVpDH93HfjxvB0vBbyO/Fpd5pMfnuGMIL5kRslzs0EL/fkXQXTOk56QXN9jMdUoY0ieZ4Bap2Ig==",
       "type": "package",
-      "path": "sips.framework.core.autoregister/1.0.21-rc1",
+      "path": "sips.framework.core.autoregister/1.0.26-rc1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "lib/netstandard2.0/AutoRegister.dll",
-        "sips.framework.core.autoregister.1.0.21-rc1.nupkg.sha512",
+        "sips.framework.core.autoregister.1.0.26-rc1.nupkg.sha512",
         "sips.framework.core.autoregister.nuspec"
       ]
     },
@@ -1971,14 +1971,14 @@
     ".NETStandard,Version=v2.0": [
       "ConsoleTables >= 2.4.2",
       "NETStandard.Library >= 2.0.3",
-      "SIPS.Framework.Core.AutoRegister >= 1.0.21-rc1"
+      "SIPS.Framework.Core.AutoRegister >= 1.0.26-rc1"
     ]
   },
   "packageFolders": {
     "C:\\Users\\paolo\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.22-rc1",
+    "version": "1.0.26-rc1",
     "restore": {
       "projectUniqueName": "C:\\Users\\paolo\\source\\repos\\SIPS_framework\\SIPS_framework_core\\Core\\Core.csproj",
       "projectName": "SIPS.Framework.Core",
@@ -2026,7 +2026,7 @@
           },
           "SIPS.Framework.Core.AutoRegister": {
             "target": "Package",
-            "version": "[1.0.21-rc1, )"
+            "version": "[1.0.26-rc1, )"
           }
         },
         "imports": [

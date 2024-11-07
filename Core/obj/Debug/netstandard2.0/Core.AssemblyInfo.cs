@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2023 Paolo Saccani")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Core dependency resolution and common functions.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.9.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+431defca78e7d965a3ec44c883a7aeabdc763b10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.1+92430fc90a5d83139416295f7bd087aa279e1f1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIPS.Framework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.9.1.0")]

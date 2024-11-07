@@ -11,7 +11,7 @@
         "dependencies": {
           "ConsoleTables": "2.4.2",
           "NETStandard.Library": "2.0.3",
-          "SIPS.Framework.Core.AutoRegister": "1.0.21-rc1"
+          "SIPS.Framework.Core.AutoRegister": "1.0.26-rc1"
         },
         "runtime": {
           "Core.dll": {}
@@ -201,7 +201,7 @@
           }
         }
       },
-      "SIPS.Framework.Core.AutoRegister/1.0.21-rc1": {
+      "SIPS.Framework.Core.AutoRegister/1.0.26-rc1": {
         "dependencies": {
           "Autofac": "8.1.0",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
@@ -480,12 +480,12 @@
       "path": "serilog/4.0.1",
       "hashPath": "serilog.4.0.1.nupkg.sha512"
     },
-    "SIPS.Framework.Core.AutoRegister/1.0.21-rc1": {
+    "SIPS.Framework.Core.AutoRegister/1.0.26-rc1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pa8CDuuJzNClFbu++aRFJOvzyxV1rNZb3waGBO4jwggeekUuEbZRd02D5jeEqe9v1oLjDqpMglUuBbKtcCQPJw==",
-      "path": "sips.framework.core.autoregister/1.0.21-rc1",
-      "hashPath": "sips.framework.core.autoregister.1.0.21-rc1.nupkg.sha512"
+      "sha512": "sha512-8wnJ6Ls/K3lAVpDH93HfjxvB0vBbyO/Fpd5pMfnuGMIL5kRslzs0EL/fkXQXTOk56QXN9jMdUoY0ieZ4Bap2Ig==",
+      "path": "sips.framework.core.autoregister/1.0.26-rc1",
+      "hashPath": "sips.framework.core.autoregister.1.0.26-rc1.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
