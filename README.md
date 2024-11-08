@@ -9,6 +9,7 @@ The SIPS framework collects different .Net libraries useful for writing generic 
 -  [SIPS.Framework.SDA](https://github.com/paolsac/SIPS.Framework_SDA) - Common and base functions for Simple Data Access (SDA)
 -  [SIPS.Framework.SDA_Postgress](https://github.com/paolsac/SIPS.Framework_SDA) - Postgress & Redshift provider for SDA.
 -  [SIPS.Framework.SDA_SqlServer](https://github.com/paolsac/SIPS.Framework_SDA) - SqlServer provider for SDA
+-  [SIPS.Framework.SDAC_Processor](https://github.com/paolsac/SIPS.Framewor_SDA) - Library of providers for ETL processing with SDA
 
 ## Project
 
