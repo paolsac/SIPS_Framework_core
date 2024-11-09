@@ -126,5 +126,13 @@ namespace SIPS.Framework.Core.Providers
             }
         }
 
+
+        // get active instance counter to the log as readonly
+        public IReadOnlyDictionary<string, int> GetActiveInstanceCounter()
+        {
+            return _activeInstanceCounter;
+        }
+
+
     }
 }

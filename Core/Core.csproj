@@ -18,8 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/paolsac/SIPS_Framework_core</RepositoryUrl>
     <PackageReleaseNotes>
-      fix InstanceCounterProvider:LogInstanceActions:Enabled flag usage
-      fix InstanceCounterProvider:LogReleaseActions:Enabled flag usage
+      add  InstanceCounterProvider:GetActiveInstanceCounter()
     </PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -28,7 +27,7 @@
     <FileVersion></FileVersion>
     <AssemblyVersion>0.9.1.0</AssemblyVersion>
     <FileVersion>0.9.1.0</FileVersion>
-    <PackageVersion>1.0.26-rc1</PackageVersion>
+    <PackageVersion>1.0.28-rc1</PackageVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -54,7 +53,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConsoleTables" Version="2.4.2" />
-    <PackageReference Include="SIPS.Framework.Core.AutoRegister" Version="1.0.26-rc1" />
+    <PackageReference Include="SIPS.Framework.Core.AutoRegister" Version="1.0.27-rc1" />
   </ItemGroup>
 
 
