@@ -46,6 +46,7 @@ namespace SIPS.Framework.Core.Providers
         private readonly HashSet<string> _logActiveInstanceCounter_includes;
         private readonly HashSet<string> _logActiveReleaseCounter_includes;
         private readonly IConfiguration _configuration;
+        private readonly Dictionary<string, HashSet<int>> _activeInstanceIds;
 
         public InstanceCounterProvider(ILogger<InstanceCounterProvider> logger, IConfiguration configuration)
         {
@@ -59,6 +60,7 @@ namespace SIPS.Framework.Core.Providers
 
             _counter = this;
             InstanceId = _counter.GetInstanceId(this.GetType().Name);
+            _activeInstanceIds = new Dictionary<string, HashSet<int>>();
         }
 
         public int GetInstanceId(string classname)
@@ -69,6 +71,7 @@ namespace SIPS.Framework.Core.Providers
                 if (!_lastId.TryGetValue(classname, out lastUsedId))
                 {
                     _activeInstanceCounter.Add(classname, 0);
+                    _activeInstanceIds.Add(classname, new HashSet<int>());
                     _lastId.Add(classname, 0);
                 }
                 lastUsedId++;
@@ -78,6 +81,7 @@ namespace SIPS.Framework.Core.Providers
                 }
                 _lastId[classname]= lastUsedId;
                 _activeInstanceCounter[classname]++;
+                _activeInstanceIds[classname].Add(lastUsedId);
                 if (_logActiveInstanceCounter || _logActiveInstanceCounter_includes.Contains(classname))
                     _logger.LogInformation("InstanceCounterProvider created {providerName} [instanceId:{instanceId}] [active instances:{activeInstanceCounter}]", classname, lastUsedId, _activeInstanceCounter[classname]);
 
@@ -90,6 +94,7 @@ namespace SIPS.Framework.Core.Providers
             lock (_instanceCounterLock)
             {
                 _activeInstanceCounter[classname]--;
+                _activeInstanceIds[classname].Remove(id);
                 if (_logActiveReleaseCounter || _logActiveReleaseCounter_includes.Contains(classname))
                     _logger.LogInformation("InstanceCounterProvider released {providerName} [instanceId:{instanceId}] [active instances:{activeInstanceCounter}]", classname, id, _activeInstanceCounter[classname]);
             }
@@ -131,6 +136,12 @@ namespace SIPS.Framework.Core.Providers
         public IReadOnlyDictionary<string, int> GetActiveInstanceCounter()
         {
             return _activeInstanceCounter;
+        }
+
+        // get active instance counter to the log as readonly
+        public IReadOnlyDictionary<string, HashSet<int>> GetActiveInstanceIds()
+        {
+            return _activeInstanceIds;
         }
 
 
