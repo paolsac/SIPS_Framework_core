@@ -302,7 +302,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                         )
                     .Where(t => finalTypeFilter(t))
                     .InstancePerLifetimeScope()
-                    .Named<TService>(t => customName ?? t.Name)
+                    .Named<TInterface>(t => customName ?? t.Name)
                     ;
             }
             //
@@ -331,7 +331,7 @@ namespace SIPS.Framework.Core.AutoRegister.Extensions
                         )
                     .Where(t => finalTypeFilter(t))
                     .InstancePerDependency()
-                    .Named<TService>(t => customName ?? t.Name)
+                    .Named<TInterface>(t => customName ?? t.Name)
                     ;
             }
 
