@@ -87,7 +87,7 @@ namespace SIPS.Framework.Core.Providers
                         .SelectMany(r => r.Services)
                         .OfType<Autofac.Core.TypedService>()
                         .Select(s => s.ServiceType)
-                        .Where(t => t.Name == "classname")
+                        .Where(t => t.Name == classname)
                         .Where(t => typeof(IFCAutoRegisterTransient).IsAssignableFrom(t) || typeof(IFCAutoRegisterScoped).IsAssignableFrom(t) || typeof(IFCAutoRegisterSingleton).IsAssignableFrom(t) || typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t) || typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t))
                         .Select(t => {
                             string interfaceName = "N/A";
