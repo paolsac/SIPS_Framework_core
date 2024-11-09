@@ -1,4 +1,5 @@
-﻿using ConsoleTables;
+﻿using Autofac;
+using ConsoleTables;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SIPS.Framework.Core.AutoRegister.Interfaces;
@@ -47,8 +48,10 @@ namespace SIPS.Framework.Core.Providers
         private readonly HashSet<string> _logActiveReleaseCounter_includes;
         private readonly IConfiguration _configuration;
         private readonly Dictionary<string, HashSet<int>> _activeInstanceIds;
+        private readonly Dictionary<string, string> _autoregistrationTypes;
+        private readonly ILifetimeScope _autofac;
 
-        public InstanceCounterProvider(ILogger<InstanceCounterProvider> logger, IConfiguration configuration)
+        public InstanceCounterProvider(ILogger<InstanceCounterProvider> logger, IConfiguration configuration, ILifetimeScope autofac)
         {
             _logger = logger;
             _configuration = configuration;
@@ -60,6 +63,8 @@ namespace SIPS.Framework.Core.Providers
 
             _counter = this;
             _activeInstanceIds = new Dictionary<string, HashSet<int>>();
+            _autoregistrationTypes = new Dictionary<string, string>();
+            _autofac = autofac;
 
             // watch the call to GetInstanceId. This line must not be moved before the _counter assignment and the _activeInstanceIds initialization
 
@@ -76,6 +81,34 @@ namespace SIPS.Framework.Core.Providers
                     _activeInstanceCounter.Add(classname, 0);
                     _activeInstanceIds.Add(classname, new HashSet<int>());
                     _lastId.Add(classname, 0);
+
+
+                    var a = _autofac.ComponentRegistry.Registrations
+                        .SelectMany(r => r.Services)
+                        .OfType<Autofac.Core.TypedService>()
+                        .Select(s => s.ServiceType)
+                        .Where(t => t.Name == "classname")
+                        .Where(t => typeof(IFCAutoRegisterTransient).IsAssignableFrom(t) || typeof(IFCAutoRegisterScoped).IsAssignableFrom(t) || typeof(IFCAutoRegisterSingleton).IsAssignableFrom(t) || typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t) || typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t))
+                        .Select(t => {
+                            string interfaceName = "N/A";
+                            if (typeof(IFCAutoRegisterTransient).IsAssignableFrom(t)) interfaceName = "IFCAutoRegisterTransient";
+                            if (typeof(IFCAutoRegisterScoped).IsAssignableFrom(t)) interfaceName = "IFCAutoRegisterScoped";
+                            if (typeof(IFCAutoRegisterSingleton).IsAssignableFrom(t)) interfaceName = "IFCAutoRegisterSingleton";
+                            if (typeof(IFCAutoRegisterTransientNamed).IsAssignableFrom(t)) interfaceName = "IFCAutoRegisterTransientNamed";
+                            if (typeof(IFCAutoRegisterScopedNamed).IsAssignableFrom(t)) interfaceName = "IFCAutoRegisterScopedNamed";
+                            return new { Type = t.Name, Interface = interfaceName };
+                        })
+                        .Distinct()
+                        .ToDictionary(t => t.Type, t => t.Interface);
+                    if (a.ContainsKey(classname))
+                    {
+                        _autoregistrationTypes.Add(classname, a[classname]);
+                    }
+                    else
+                    {
+                        _autoregistrationTypes.Add(classname, "N/A");
+                    }
+
                 }
                 lastUsedId++;
                 if(lastUsedId == int.MaxValue)
@@ -107,6 +140,8 @@ namespace SIPS.Framework.Core.Providers
         {
             public string Type { get; set; }
             public int Instances { get; set; }
+            public string Interface { get; set; }
+            public string IDlist { get; set; }
         }
         public void LogCurrentInstanceStatistics()
         {
@@ -120,7 +155,13 @@ namespace SIPS.Framework.Core.Providers
                                             .Where(kv => kv.Value > 0)
                                             .OrderByDescending(kv => kv.Value)
                                             .ThenBy(kv => kv.Key)
-                                            .Select(kv => new StatisticItem { Type = kv.Key, Instances = kv.Value })
+                                            .Select(kv => new StatisticItem
+                                            {
+                                                Type = kv.Key,
+                                                Instances = kv.Value,
+                                                Interface = _autoregistrationTypes[kv.Key],
+                                                IDlist = TruncateString(_activeInstanceIds.ContainsKey(kv.Key) ? string.Join(",", _activeInstanceIds[kv.Key]) : "N/A", 30)
+                                            })
                                         )
                     .Configure(o => o.NumberAlignment = Alignment.Right)
                     .Write(ConsoleTables.Format.MarkDown);
@@ -145,6 +186,22 @@ namespace SIPS.Framework.Core.Providers
         public IReadOnlyDictionary<string, HashSet<int>> GetActiveInstanceIds()
         {
             return _activeInstanceIds;
+        }
+
+        // get autoregistration types to the log as readonly
+        public IReadOnlyDictionary<string, string> GetAutoregistrationTypes()
+        {
+            return _autoregistrationTypes;
+        }
+
+        private static string TruncateString(string input, int maxLength)
+        {
+            if (string.IsNullOrEmpty(input) || input.Length <= maxLength)
+            {
+                return input;
+            }
+
+            return input.Substring(0, maxLength - 3) + "...";
         }
 
 

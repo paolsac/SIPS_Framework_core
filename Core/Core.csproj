@@ -18,7 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/paolsac/SIPS_Framework_core</RepositoryUrl>
     <PackageReleaseNotes>
-      fix  sequence of construction 
+      add GetAutoregistrationTypes
     </PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -27,7 +27,7 @@
     <FileVersion></FileVersion>
     <AssemblyVersion>0.9.1.0</AssemblyVersion>
     <FileVersion>0.9.1.0</FileVersion>
-    <PackageVersion>1.0.30-rc1</PackageVersion>
+    <PackageVersion>1.0.31-rc1</PackageVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
