@@ -59,8 +59,11 @@ namespace SIPS.Framework.Core.Providers
             _logActiveReleaseCounter_includes = new HashSet<string>(_configuration.GetSection("InstanceCounterProvider:LogReleaseActions:Includes").Get<string[]>() ?? new string[] { });
 
             _counter = this;
-            InstanceId = _counter.GetInstanceId(this.GetType().Name);
             _activeInstanceIds = new Dictionary<string, HashSet<int>>();
+
+            // watch the call to GetInstanceId. This line must not be moved before the _counter assignment and the _activeInstanceIds initialization
+
+            InstanceId = _counter.GetInstanceId(this.GetType().Name);
         }
 
         public int GetInstanceId(string classname)
