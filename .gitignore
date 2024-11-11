@@ -398,3 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 /AutoRegister/.nuget-push
 /Core/.nuget-push
+/AutoRegister/obj/AutoRegister.csproj.nuget.dgspec.json
